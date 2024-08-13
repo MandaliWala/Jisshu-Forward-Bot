@@ -1,5 +1,4 @@
-# bot developer @mr_jisshu
-fimport os
+import os
 
 class Config:
     API_ID = os.environ.get("API_ID", "25163484")
