@@ -1,13 +1,23 @@
-import os
+# bot developer @mr_jisshu
+from os import environ 
 
 class Config:
-    API_ID = os.environ.get("API_ID", "25163484")
-    API_HASH = os.environ.get("API_HASH", "145bcbc424d1c1ffe04f3e607ea55c9a")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7062533535:AAGwGXeYVJXvWuoTyAi6ZETTbL26NXjL9zQ") 
-    BOT_SESSION = os.environ.get("BOT_SESSION", "forward-bot") 
-    DB_URL = os.environ.get("DB_URL", "mongodb+srv://fowardbot:fowardbot@cluster0.qjwunlh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-    DB_NAME = os.environ.get("DB_NAME", "Cluster0")
-    OWNER_ID = [int(id) for id in os.environ.get("OWNER_ID", '6302921275').split()]
+    
+    API_ID = environ.get("API_ID", "25163484")
+    API_HASH = environ.get("API_HASH", "145bcbc424d1c1ffe04f3e607ea55c9a")
+    BOT_TOKEN = environ.get("BOT_TOKEN", "7062533535:AAGwGXeYVJXvWuoTyAi6ZETTbL26NXjL9zQ") 
+    BOT_OWNER_ID = [int(id) for id in environ.get("BOT_OWNER_ID", '6302921275').split()]
+    BOT_SESSION = environ.get("BOT_SESSION", "bot") 
+
+    PICS = (environ.get('PICS', 'https://graph.org/file/e223aea8aca83e99162bb.jpg'))
+    
+    DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://fowardbot:fowardbot@cluster0.qjwunlh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    DATABASE_NAME = environ.get("DATABASE_NAME", "Cluster0")
+    
+    LOG_CHANNEL = int(environ.get('LOG_CHANNEL',"-1002137528664")
+    FORCE_SUB_CHANNEL = environ.get("FORCE_SUB_CHANNEL", "https://t.me/+oYHPNrgxi1QzYTY9") # FORCE SUB channel link
+    FORCE_SUB_ON = environ.get("FORCE_SUB_ON", "True")  # FORCE SUB ON - OFF
+
 
 class temp(object): 
     lock = {}
