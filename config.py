@@ -10,7 +10,7 @@ class Config:
     PICS = (environ.get('PICS', 'https://graph.org/file/e223aea8aca83e99162bb.jpg'))
     DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://fowardbot:fowardbot@cluster0.qjwunlh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     DATABASE_NAME = environ.get("DATABASE_NAME", "Cluster0")
-    LOG_CHANNEL = int(environ.get('LOG_CHANNEL',('-1002137528664')
+    LOG_CHANNEL = int(environ.get('LOG_CHANNEL','-1002137528664')
     FORCE_SUB_CHANNEL = environ.get("FORCE_SUB_CHANNEL", "https://t.me/+oYHPNrgxi1QzYTY9")
     FORCE_SUB_ON = environ.get("FORCE_SUB_ON", "True")
 
