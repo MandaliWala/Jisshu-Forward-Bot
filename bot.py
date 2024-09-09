@@ -52,7 +52,7 @@ class Bot(Client):
     #    await self.send_message("venombotsupport", text)
         if (success + failed) != 0:
            await db.rmve_frwd(all=True)
-            app = web.AppRunner(await web_server())
+           app = web.AppRunner(await web_server())
            await app.setup()
            await web.TCPSite(app, "0.0.0.0", 8080).start()
            logging.info(f"Restart message status"
